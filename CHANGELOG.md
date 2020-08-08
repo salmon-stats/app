@@ -1,3 +1,24 @@
+# Version 0.1.2 (2020-08-09)
+
+## Feature updates
+
+* Make viewing locally saved results possible without network connection
+* Make it possible to update `iksm_session` after expiration
+* Add marker to indicate unread release notes
+* Improve start-up performance
+
+## Bug fixes
+
+* Fix refreshing results adds duplicate entries
+* Fix results pagination when using multiple users
+* Fix automatic Salmon Stats API Token fetching was not working
+
+## Other updates
+
+* This app is now also available for download at [GitHub](https://github.com/salmon-stats/app/releases).
+
+----
+
 # Version 0.1.1 (2020-08-04)
 
 ## Feature updates
