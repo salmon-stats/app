@@ -15,6 +15,8 @@
    keyAlias=<key alias>
    storeFile=/path/to/<name>.keystore
    ```
+
+   Note: Alternatively, you can use following environmental variables: `KEY_ALIAS`, `KEY_PASSWORD`, `KEY_STORE_FILE`, `KEY_STORE_PASSWORD`.
 3. When running `flutter build apk --release`, if `local.properties` contained `storeFile` key, it will try to sign the build using given key. Otherwise, it will sign the build using debug key.
 
 ### Build for release
