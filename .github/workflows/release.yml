@@ -188,7 +188,8 @@ jobs:
       - name: Create whatsNewDirectory
         run: |
           mkdir /tmp/whatsnew
-          printf '%s' "$TAG_SUBJECT" > /tmp/whatsnew/whatsnew-en-US
+          release_notes=$(printf %s "$(sed '/^----$/Q' CHANGELOG.md)")
+          printf '%s' "$release_notes" > /tmp/whatsnew/whatsnew-en-US
 
       - name: Download artifact made by `build-aab`
         id: download
