@@ -5,7 +5,9 @@ if (localPropertiesFile.exists()) {
         localProperties.load(reader)
     }
 }
-def hasLocalKeyProperties = localProperties.containsKey('storeFile')
+
+def storeFilePath = getCredential('KEY_STORE_FILE', localProperties['storeFile'])
+def hasLocalKeyProperties = storeFilePath != null
 
 def flutterRoot = localProperties.getProperty('flutter.sdk')
 if (flutterRoot == null) {
@@ -25,6 +27,14 @@ if (flutterVersionName == null) {
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+
+String getCredential(String envKey, String localProperty) {
+    final String envValue = System.getenv(envKey)
+    if (envValue == null || envValue.isEmpty()) {
+        return localProperty
+    }
+    return envValue
+}
 
 android {
     compileSdkVersion 28
@@ -50,12 +60,10 @@ android {
     signingConfigs {
         release {
             if (hasLocalKeyProperties) {
-                println(localProperties['storeFile'])
-
-                keyAlias localProperties['keyAlias']
-                keyPassword localProperties['keyPassword']
-                storeFile file(localProperties['storeFile'])
-                storePassword localProperties['storePassword']
+                keyAlias getCredential('KEY_ALIAS', localProperties['keyAlias'])
+                keyPassword getCredential('KEY_PASSWORD', localProperties['keyPassword'])
+                storeFile file(storeFilePath)
+                storePassword getCredential('KEY_STORE_PASSWORD', localProperties['storePassword'])
             }
         }
     }

@@ -32,11 +32,24 @@ jobs:
       - name: Copy .env
         run: cp .env assets/.env
 
+      - name: Set KEY_STORE_FILE and create keystore file
+        env:
+          CONTEXT_TEMP_DIR: ${{ runner.temp }}
+          KEY_STORE_BASE64: ${{ secrets.KEY_STORE_BASE64 }}
+        run: |
+          KEY_STORE_FILE="$CONTEXT_TEMP_DIR/release.keystore"
+          echo ::set-env name=KEY_STORE_FILE::"$KEY_STORE_FILE"
+          echo "$KEY_STORE_BASE64" | base64 -d > "$KEY_STORE_FILE"
+
       - name: Install dependencies
         run: flutter pub get
 
       - name: Build APK
         run: flutter build apk
+        env:
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
@@ -137,11 +150,24 @@ jobs:
       - name: Copy .env
         run: cp .env assets/.env
 
+      - name: Set KEY_STORE_FILE and create keystore file
+        env:
+          CONTEXT_TEMP_DIR: ${{ runner.temp }}
+          KEY_STORE_BASE64: ${{ secrets.KEY_STORE_BASE64 }}
+        run: |
+          KEY_STORE_FILE="$CONTEXT_TEMP_DIR/release.keystore"
+          echo ::set-env name=KEY_STORE_FILE::"$KEY_STORE_FILE"
+          echo "$KEY_STORE_BASE64" | base64 -d > "$KEY_STORE_FILE"
+
       - name: Install dependencies
         run: flutter pub get
 
       - name: Build App Bundle
         run: flutter build appbundle --target-platform android-arm,android-arm64,android-x64
+        env:
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+          KEY_STORE_PASSWORD: ${{ secrets.KEY_STORE_PASSWORD }}
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
