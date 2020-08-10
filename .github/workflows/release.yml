@@ -90,7 +90,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ env.RELEASING_VERSION }}
-          release_name: Release ${{ env.RELEASING_VERSION }}
+          release_name: ${{ env.RELEASING_VERSION }}
           body: ${{ env.RELEASE_NOTES  }}
           draft: false
           prerelease: false
