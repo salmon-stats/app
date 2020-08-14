@@ -30,7 +30,7 @@ dependencies:
 
   cached_network_image: ^2.1.0+1
   cookie_jar: ^1.0.1
-  dart_json_mapper: ^1.5.10
+  dart_json_mapper: ^1.5.19
   dio: ^3.0.9
   dio_cookie_manager: ^1.0.0
   font_awesome_flutter: ^8.8.1
