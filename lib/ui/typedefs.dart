@@ -10,6 +10,19 @@ abstract class PushablePage<T extends Widget> {
 //  }
 }
 
+mixin SharablePageMixin {
+  Future<String> shareText(BuildContext context);
+
+  Widget buildShareButton(BuildContext context) {
+    return IconButton(
+      icon: const Icon(Icons.share),
+      onPressed: () async {
+        Share.share(await shareText(context));
+      },
+    );
+  }
+}
+
 enum IksmStatus {
   expired, // When NSO API returns 403 error.
   error, // Likely because the device is offline.

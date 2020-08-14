@@ -8,7 +8,7 @@ class SalmonStatsPage extends StatefulWidget {
   SalmonStatsPageState createState() => SalmonStatsPageState();
 }
 
-class SalmonStatsPageState extends State<SalmonStatsPage> with AutomaticKeepAliveClientMixin<SalmonStatsPage> {
+class SalmonStatsPageState extends State<SalmonStatsPage> with AutomaticKeepAliveClientMixin<SalmonStatsPage>, SharablePageMixin {
   WebViewController _controller;
 
   @override
@@ -22,14 +22,7 @@ class SalmonStatsPageState extends State<SalmonStatsPage> with AutomaticKeepAliv
       appBar: AppBar(
         // title: , // TODO: Add page title
         actions: <Widget>[
-          IconButton(
-            icon: const Icon(Icons.share),
-            onPressed: () async {
-              final String url = await _controller.currentUrl();
-
-              Share.share(url.contains(Config.SALMON_STATS_URL) ? S.of(context).salmonStatsSharingText(url) : url);
-            },
-          ),
+          buildShareButton(context),
         ],
       ),
       body: WebView(
@@ -38,6 +31,13 @@ class SalmonStatsPageState extends State<SalmonStatsPage> with AutomaticKeepAliv
         javascriptMode: JavascriptMode.unrestricted,
       ),
     );
+  }
+
+  @override
+  Future<String> shareText(BuildContext context) async {
+    final String url = await _controller.currentUrl();
+
+    return url.contains(Config.SALMON_STATS_URL) ? S.of(context).salmonStatsSharingText(url) : url;
   }
 
   Future<bool> requestGoBack() {
