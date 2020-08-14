@@ -21,14 +21,11 @@ class IdEntity {
   String idStr;
 }
 
+@jsonSerializable
 class CountEntity {
   const CountEntity(this.count);
 
   final int count;
-
-  static MapEntry<String, CountEntity> mapper(MapEntry<String, dynamic> entry) {
-    return MapEntry<String, CountEntity>(entry.key, CountEntity(entry.value['count'] as int));
-  }
 }
 
 @jsonSerializable
@@ -51,15 +48,7 @@ class SalmonResult {
   @JsonProperty(ignore: true)
   DateTime get playDate => DateTime.fromMillisecondsSinceEpoch((playTime ?? 0) * 1000);
 
-  @JsonProperty(ignore: true)
-  Map<String, CountEntity> get bossCounts => _bossCounts == null
-      ? null
-      : Map<String, CountEntity>.fromEntries(
-          _bossCounts?.entries?.map(CountEntity.mapper),
-        );
-
-  @JsonProperty(name: 'boss_counts')
-  Map<String, dynamic> _bossCounts;
+  Map<String, CountEntity> bossCounts;
   num dangerRate; // either int or double
   IdEntity grade;
   int gradePoint;
@@ -73,15 +62,7 @@ class SalmonResult {
 
 @jsonSerializable
 class ResultDetails {
-  @JsonProperty(ignore: true)
-  Map<String, CountEntity> get bossKillCounts => _bossKillCounts == null
-      ? null
-      : Map<String, CountEntity>.fromEntries(
-          _bossKillCounts.entries.map(CountEntity.mapper),
-        );
-
-  @JsonProperty(name: 'boss_kill_counts')
-  Map<String, dynamic> _bossKillCounts;
+  Map<String, CountEntity> bossKillCounts;
   int deadCount;
   int goldenIkuraNum;
   int ikuraNum;
