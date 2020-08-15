@@ -257,9 +257,9 @@ class _ResultsList extends StatelessWidget {
             children: <Widget>[
               Row(
                 children: <Widget>[
-                  SpecialWeapon(result.myResult.special.id),
+                  SpecialWeaponImage(result.myResult.special.id),
                   const Padding(padding: EdgeInsets.only(right: 8.0)),
-                  ...result.myResult.weaponList.map((IdEntity i) => MainWeapon(i.id)),
+                  ...result.myResult.weaponList.map((IdEntity i) => MainWeaponImage(i.id)),
                 ],
               ),
               Row(

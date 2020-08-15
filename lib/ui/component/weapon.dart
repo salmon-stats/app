@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:salmon_stats_app/config.dart';
 import 'package:salmon_stats_app/ui/all.dart';
 
+const Size _defaultBossImageSize = Size.square(32.0);
 const Size _defaultMainWeaponImageSize = Size.square(24.0);
 const Size _defaultSpecialWeaponImageSize = Size.square(32.0);
 
@@ -14,6 +15,7 @@ _URLBuilder _weaponImageUrl(String type) {
 }
 
 final _URLBuilder _mainWeaponImageUrl = _weaponImageUrl('weapon');
+final _URLBuilder _salmonBossImageUrl = _weaponImageUrl('salmon-boss');
 final _URLBuilder _specialWeaponImageUrl = _weaponImageUrl('special');
 
 abstract class _WeaponImage extends StatelessWidget {
@@ -34,8 +36,17 @@ abstract class _WeaponImage extends StatelessWidget {
   String _imageUrl();
 }
 
-class MainWeapon extends _WeaponImage {
-  const MainWeapon(int id, {Size size = _defaultMainWeaponImageSize}) : super(id, size: size);
+class BossImage extends _WeaponImage {
+  const BossImage(int id, {Size size = _defaultBossImageSize}) : super(id, size: size);
+
+  @override
+  String _imageUrl() {
+    return _salmonBossImageUrl(id);
+  }
+}
+
+class MainWeaponImage extends _WeaponImage {
+  const MainWeaponImage(int id, {Size size = _defaultMainWeaponImageSize}) : super(id, size: size);
 
   @override
   String _imageUrl() {
@@ -43,8 +54,8 @@ class MainWeapon extends _WeaponImage {
   }
 }
 
-class SpecialWeapon extends _WeaponImage {
-  const SpecialWeapon(int id, {Size size = _defaultSpecialWeaponImageSize}) : super(id, size: size);
+class SpecialWeaponImage extends _WeaponImage {
+  const SpecialWeaponImage(int id, {Size size = _defaultSpecialWeaponImageSize}) : super(id, size: size);
 
   @override
   String _imageUrl() {
