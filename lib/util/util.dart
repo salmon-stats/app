@@ -7,6 +7,10 @@ import 'package:salmon_stats_app/config.dart';
 import 'package:salmon_stats_app/repository/splatnet_repository.dart';
 import 'package:salmon_stats_app/ui/typedefs.dart';
 
+String _capitalizeFirstLetter(String text) {
+  return text[0].toUpperCase() + text.substring(1);
+}
+
 CookieJar createCookieJar(String iksmSession) {
   final CookieJar cookieJar = CookieJar();
   cookieJar.saveFromResponse(Uri.parse(Config.SPLATNET_ORIGIN), <Cookie>[
@@ -18,6 +22,17 @@ CookieJar createCookieJar(String iksmSession) {
 
 Map<String, dynamic> jsonDecodeMap(String source) {
   return jsonDecode(source) as Map<String, dynamic>;
+}
+
+String toCamelCase(String text) {
+  return text
+      .split('-')
+      .asMap()
+      .entries
+      .map<String>(
+        (MapEntry<int, String> entry) => entry.key == 0 ? entry.value : _capitalizeFirstLetter(entry.value),
+      )
+      .join('');
 }
 
 Future<IksmStatus> validateIksmSession(CookieJar cookieJar) {

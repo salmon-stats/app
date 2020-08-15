@@ -24,6 +24,7 @@ Future<void> main() async {
         typeOf<List<NicknameAndIcon>>(): (dynamic value) => value.cast<NicknameAndIcon>(),
         typeOf<List<ResultDetails>>(): (dynamic value) => value.cast<ResultDetails>(),
         typeOf<List<UploadResult>>(): (dynamic value) => value.cast<UploadResult>(),
+        typeOf<List<WaveDetails>>(): (dynamic value) => value.cast<WaveDetails>(),
         typeOf<Map<String, CountEntity>>(): (dynamic value) => value.cast<String, CountEntity>(),
       },
     ),
