@@ -255,6 +255,96 @@ class S {
 
   // skipped getter for the '\$comment' key
 
+  /// `Goldie`
+  String get bossGoldie {
+    return Intl.message(
+      'Goldie',
+      name: 'bossGoldie',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Steelhead`
+  String get bossSteelhead {
+    return Intl.message(
+      'Steelhead',
+      name: 'bossSteelhead',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Flyfish`
+  String get bossFlyfish {
+    return Intl.message(
+      'Flyfish',
+      name: 'bossFlyfish',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Scrapper`
+  String get bossScrapper {
+    return Intl.message(
+      'Scrapper',
+      name: 'bossScrapper',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Steel Eel`
+  String get bossSteelEel {
+    return Intl.message(
+      'Steel Eel',
+      name: 'bossSteelEel',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Stinger`
+  String get bossStinger {
+    return Intl.message(
+      'Stinger',
+      name: 'bossStinger',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Maws`
+  String get bossMaws {
+    return Intl.message(
+      'Maws',
+      name: 'bossMaws',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Griller`
+  String get bossGriller {
+    return Intl.message(
+      'Griller',
+      name: 'bossGriller',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Drizzler`
+  String get bossDrizzler {
+    return Intl.message(
+      'Drizzler',
+      name: 'bossDrizzler',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter API Token manually`
   String get enterApiTokenManually {
     return Intl.message(

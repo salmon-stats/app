@@ -23,6 +23,17 @@
   "uploadCanceledButtonText": "アップロードを中断しました",
   "uploadCompletedButtonText": "アップロード完了",
 
+  "$comment": "Boss names",
+  "bossGoldie": "キンシャケ",
+  "bossSteelhead": "バクダン",
+  "bossFlyfish": "カタパッド",
+  "bossScrapper": "テッパン",
+  "bossSteelEel": "ヘビ",
+  "bossStinger": "タワー",
+  "bossMaws": "モグラ",
+  "bossGriller": "グリル",
+  "bossDrizzler": "コウモリ",
+
   "$comment": "Preferences Page",
   "enterApiTokenManually": "手動でAPI Tokenを入力する",
   "getApiToken": "API Tokenを取得",

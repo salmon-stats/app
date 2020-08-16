@@ -23,6 +23,17 @@
   "uploadCanceledButtonText": "Successfully stopped ",
   "uploadCompletedButtonText": "Upload completed.",
 
+  "$comment": "Boss names",
+  "bossGoldie": "Goldie",
+  "bossSteelhead": "Steelhead",
+  "bossFlyfish": "Flyfish",
+  "bossScrapper": "Scrapper",
+  "bossSteelEel": "Steel Eel",
+  "bossStinger": "Stinger",
+  "bossMaws": "Maws",
+  "bossGriller": "Griller",
+  "bossDrizzler": "Drizzler",
+
   "$comment": "Preferences Page",
   "enterApiTokenManually": "Enter API Token manually",
   "getApiToken": "Get API Token",
