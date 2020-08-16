@@ -34,6 +34,20 @@
   "bossGriller": "Griller",
   "bossDrizzler": "Drizzler",
 
+  "$comment": "Event names",
+  "eventCohockCharge": "Cohock Charge",
+  "eventFog": "Fog",
+  "eventGoldieSeeking": "Goldie Seeking",
+  "eventGriller": "The Griller",
+  "eventMothership": "The Mothership",
+  "eventRush": "Rush",
+  "eventWaterLevels": "-",
+
+  "$comment": "Water levels",
+  "waterLevelLow": "Low tide",
+  "waterLevelNormal": "Normal tide",
+  "waterLevelHigh": "High tide",
+
   "$comment": "Preferences Page",
   "enterApiTokenManually": "Enter API Token manually",
   "getApiToken": "Get API Token",

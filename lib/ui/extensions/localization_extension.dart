@@ -1,3 +1,4 @@
+import 'package:salmon_stats_app/model/enums.dart'
 import 'package:salmon_stats_app/ui/all.dart';
 
 extension SalmonStatsLocalizationExtension on S {
@@ -23,6 +24,37 @@ extension SalmonStatsLocalizationExtension on S {
         return bossDrizzler;
       default:
         return '';
+    }
+  }
+
+  String eventName(SalmonEvent event) {
+    return eventCohockCharge;
+    switch (event) {
+      case SalmonEvent.cohockCharge:
+        return eventCohockCharge;
+      case SalmonEvent.fog:
+        return eventFog;
+      case SalmonEvent.goldieSeeking:
+        return eventGoldieSeeking;
+      case SalmonEvent.griller:
+        return eventGriller;
+      case SalmonEvent.theMothership:
+        return eventMothership;
+      case SalmonEvent.rush:
+        return eventRush;
+      case SalmonEvent.waterLevels:
+        return eventWaterLevels;
+    }
+  }
+
+  String waterLevelName(SalmonWaterLevel waterLevel) {
+    switch (waterLevel) {
+      case SalmonWaterLevel.low:
+        return waterLevelLow;
+      case SalmonWaterLevel.normal:
+        return waterLevelNormal;
+      case SalmonWaterLevel.high:
+        return waterLevelHigh;
     }
   }
 }

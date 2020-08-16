@@ -270,7 +270,7 @@ class _ResultsList extends StatelessWidget {
                   ),
                   ConstrainedBox(
                     constraints: const BoxConstraints.tightFor(width: 20.0),
-                    child: Text(result.myResult.goldenIkuraNum.toString(), style: const TextStyle(color: SalmonStatsColors.goldEgg)),
+                    child: Text(result.myResult.goldenIkuraNum.toString(), style: const TextStyle(color: SalmonStatsColors.goldenEgg)),
                   ),
                   ConstrainedBox(
                     constraints: const BoxConstraints.tightFor(width: 40.0),

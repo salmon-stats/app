@@ -43,6 +43,12 @@ class MessageLookup extends MessageLookupByLibrary {
     "continueButtonText" : MessageLookupByLibrary.simpleMessage("続ける"),
     "enterApiTokenManually" : MessageLookupByLibrary.simpleMessage("手動でAPI Tokenを入力する"),
     "errorDialogTitle" : MessageLookupByLibrary.simpleMessage("エラー"),
+    "eventCohockCharge" : MessageLookupByLibrary.simpleMessage("ドスコイ大量発生"),
+    "eventFog" : MessageLookupByLibrary.simpleMessage("霧"),
+    "eventGoldieSeeking" : MessageLookupByLibrary.simpleMessage("キンシャケ探し"),
+    "eventGriller" : MessageLookupByLibrary.simpleMessage("グリル発進"),
+    "eventMothership" : MessageLookupByLibrary.simpleMessage("ハコビヤ襲来"),
+    "eventRush" : MessageLookupByLibrary.simpleMessage("ラッシュ"),
     "getApiToken" : MessageLookupByLibrary.simpleMessage("API Tokenを取得"),
     "goBack" : MessageLookupByLibrary.simpleMessage("戻る"),
     "iksmExpirationMessage" : MessageLookupByLibrary.simpleMessage("iksm_session の有効期限が切れています。"),
@@ -64,6 +70,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "uploadCanceledButtonText" : MessageLookupByLibrary.simpleMessage("アップロードを中断しました"),
     "uploadCancellingButtonText" : MessageLookupByLibrary.simpleMessage("アップロードを停止中..."),
     "uploadCompletedButtonText" : MessageLookupByLibrary.simpleMessage("アップロード完了"),
+    "waterLevelHigh" : MessageLookupByLibrary.simpleMessage("満潮"),
+    "waterLevelLow" : MessageLookupByLibrary.simpleMessage("干潮"),
+    "waterLevelNormal" : MessageLookupByLibrary.simpleMessage("通常"),
     "yes" : MessageLookupByLibrary.simpleMessage("はい")
   };
 }

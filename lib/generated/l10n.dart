@@ -345,6 +345,106 @@ class S {
     );
   }
 
+  /// `Cohock Charge`
+  String get eventCohockCharge {
+    return Intl.message(
+      'Cohock Charge',
+      name: 'eventCohockCharge',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Fog`
+  String get eventFog {
+    return Intl.message(
+      'Fog',
+      name: 'eventFog',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Goldie Seeking`
+  String get eventGoldieSeeking {
+    return Intl.message(
+      'Goldie Seeking',
+      name: 'eventGoldieSeeking',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Griller`
+  String get eventGriller {
+    return Intl.message(
+      'The Griller',
+      name: 'eventGriller',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `The Mothership`
+  String get eventMothership {
+    return Intl.message(
+      'The Mothership',
+      name: 'eventMothership',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Rush`
+  String get eventRush {
+    return Intl.message(
+      'Rush',
+      name: 'eventRush',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `-`
+  String get eventWaterLevels {
+    return Intl.message(
+      '-',
+      name: 'eventWaterLevels',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Low tide`
+  String get waterLevelLow {
+    return Intl.message(
+      'Low tide',
+      name: 'waterLevelLow',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Normal tide`
+  String get waterLevelNormal {
+    return Intl.message(
+      'Normal tide',
+      name: 'waterLevelNormal',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `High tide`
+  String get waterLevelHigh {
+    return Intl.message(
+      'High tide',
+      name: 'waterLevelHigh',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `Enter API Token manually`
   String get enterApiTokenManually {
     return Intl.message(

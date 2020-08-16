@@ -34,6 +34,19 @@
   "bossGriller": "グリル",
   "bossDrizzler": "コウモリ",
 
+  "$comment": "Event names",
+  "eventCohockCharge": "ドスコイ大量発生",
+  "eventFog": "霧",
+  "eventGoldieSeeking": "キンシャケ探し",
+  "eventGriller": "グリル発進",
+  "eventMothership": "ハコビヤ襲来",
+  "eventRush": "ラッシュ",
+
+  "$comment": "Water levels",
+  "waterLevelLow": "干潮",
+  "waterLevelNormal": "通常",
+  "waterLevelHigh": "満潮",
+
   "$comment": "Preferences Page",
   "enterApiTokenManually": "手動でAPI Tokenを入力する",
   "getApiToken": "API Tokenを取得",

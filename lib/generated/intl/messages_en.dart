@@ -46,6 +46,13 @@ class MessageLookup extends MessageLookupByLibrary {
     "continueButtonText" : MessageLookupByLibrary.simpleMessage("Continue"),
     "enterApiTokenManually" : MessageLookupByLibrary.simpleMessage("Enter API Token manually"),
     "errorDialogTitle" : MessageLookupByLibrary.simpleMessage("Error"),
+    "eventCohockCharge" : MessageLookupByLibrary.simpleMessage("Cohock Charge"),
+    "eventFog" : MessageLookupByLibrary.simpleMessage("Fog"),
+    "eventGoldieSeeking" : MessageLookupByLibrary.simpleMessage("Goldie Seeking"),
+    "eventGriller" : MessageLookupByLibrary.simpleMessage("The Griller"),
+    "eventMothership" : MessageLookupByLibrary.simpleMessage("The Mothership"),
+    "eventRush" : MessageLookupByLibrary.simpleMessage("Rush"),
+    "eventWaterLevels" : MessageLookupByLibrary.simpleMessage("-"),
     "fail" : MessageLookupByLibrary.simpleMessage("Fail"),
     "getApiToken" : MessageLookupByLibrary.simpleMessage("Get API Token"),
     "goBack" : MessageLookupByLibrary.simpleMessage("Go back"),
@@ -74,6 +81,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "uploadCanceledButtonText" : MessageLookupByLibrary.simpleMessage("Successfully stopped "),
     "uploadCancellingButtonText" : MessageLookupByLibrary.simpleMessage("Stopping upload..."),
     "uploadCompletedButtonText" : MessageLookupByLibrary.simpleMessage("Upload completed."),
+    "waterLevelHigh" : MessageLookupByLibrary.simpleMessage("High tide"),
+    "waterLevelLow" : MessageLookupByLibrary.simpleMessage("Low tide"),
+    "waterLevelNormal" : MessageLookupByLibrary.simpleMessage("Normal tide"),
     "yes" : MessageLookupByLibrary.simpleMessage("Yes")
   };
 }
