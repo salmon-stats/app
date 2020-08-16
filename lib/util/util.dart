@@ -20,6 +20,10 @@ CookieJar createCookieJar(String iksmSession) {
   return cookieJar;
 }
 
+T Function(T, T) foldSum<T extends num>() {
+  return (T sum, T value) => sum + value as T;
+}
+
 Map<String, dynamic> jsonDecodeMap(String source) {
   return jsonDecode(source) as Map<String, dynamic>;
 }
