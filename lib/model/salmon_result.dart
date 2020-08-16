@@ -55,6 +55,15 @@ class SalmonResult {
   @JsonProperty(ignore: true)
   DateTime get playDate => DateTime.fromMillisecondsSinceEpoch((playTime ?? 0) * 1000);
 
+  @JsonProperty(ignore: true)
+  int get goldenEggs => waveDetails.map((WaveDetails wave) => wave.goldenIkuraNum).fold<int>(0, foldSum<int>());
+
+  @JsonProperty(ignore: true)
+  int get goldenEggsPopped => waveDetails.map((WaveDetails wave) => wave.goldenIkuraPopNum).fold<int>(0, foldSum<int>());
+
+  @JsonProperty(ignore: true)
+  int get powerEggs => waveDetails.map((WaveDetails wave) => wave.ikuraNum).fold<int>(0, foldSum<int>());
+
   Map<String, CountEntity> bossCounts;
   num dangerRate; // either int or double
   IdEntity grade;
