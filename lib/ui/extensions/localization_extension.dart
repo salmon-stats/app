@@ -1,4 +1,4 @@
-import 'package:salmon_stats_app/model/enums.dart'
+import 'package:salmon_stats_app/model/enums.dart';
 import 'package:salmon_stats_app/ui/all.dart';
 
 extension SalmonStatsLocalizationExtension on S {
